@@ -1,9 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
 :root {
+  /* https://draculatheme.com/contribute */
   --background: #282a36;
   --foreground: #bd93f9;
   --white: #f8f8f2;
-  --somecolor: #50fa7b;
+  --pink: #ff79c6;
+  /* --somecolor: #50fa7b; */
+  /* --somecolor: #ffb86c; */
+  /* --somecolor: #ff5555; */
+  /* --somecolor: #f1fa8c; */
+  /* --somecolor: #8be9fd; */
 }
 * {
   margin: 0;
@@ -19,6 +25,9 @@ body {
 }
 a {
   text-decoration: none;
+}
+h1 {
+  color: var(--foreground);
 }
 
 .header {
@@ -70,7 +79,8 @@ a {
 .home-pins h3 {
   font-size: 32px;
   font-weight: 700;
-  color: var(--foreground);
+  /* color: var(--foreground); */
+  color: var(--pink);
 }
 .home-content p {
   font-size: 16px;
@@ -207,6 +217,7 @@ a {
 @media (max-width: 720px) {
   .home {
     flex-direction: column;
+    padding: 20px 5%;
   }
 
   .home-pins {
