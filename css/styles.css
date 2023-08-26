@@ -1,8 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
 :root {
-  --dark_blue: #081b29;
-  --light_blue: #00abf0;
-  --white: #edeeed;
+  --background: #282a36;
+  --foreground: #bd93f9;
+  --white: #f8f8f2;
+  --somecolor: #50fa7b;
 }
 * {
   margin: 0;
@@ -13,7 +14,7 @@
 
 body {
   max-width: 100dvw;
-  background: var(--dark_blue);
+  background: var(--background);
   color: var(--white);
 }
 a {
@@ -21,16 +22,16 @@ a {
 }
 
 .header {
-  position: fixed;
+  /* position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 100%; */
   padding: 20px 10%;
-  background: transparent;
+  /* background: transparent;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 100;
+  z-index: 100; */
 }
 .logo {
   font-size: 25px;
@@ -48,7 +49,7 @@ a {
 }
 .navbar a:hover,
 .navbar a.active {
-  color: var(--light_blue);
+  color: var(--foreground);
 }
 
 .home {
@@ -69,7 +70,7 @@ a {
 .home-pins h3 {
   font-size: 32px;
   font-weight: 700;
-  color: var(--light_blue);
+  color: var(--foreground);
 }
 .home-content p {
   font-size: 16px;
@@ -89,11 +90,11 @@ a {
   align-items: center;
   width: 150px;
   height: 100%;
-  background: var(--light_blue);
-  border: 2px solid var(--light_blue);
+  background: var(--foreground);
+  border: 2px solid var(--foreground);
   border-radius: 8px;
   font-size: 19px;
-  color: var(--dark_blue);
+  color: var(--background);
   text-decoration: none;
   font-weight: 600;
   letter-spacing: 1px;
@@ -107,7 +108,7 @@ a {
   left: 0;
   width: 0;
   height: 100%;
-  background: var(--dark_blue);
+  background: var(--background);
   z-index: -1;
   transition: 0.5s;
 }
@@ -115,7 +116,7 @@ a {
   width: 100%;
 }
 .btn-box a:hover {
-  color: var(--light_blue);
+  color: var(--foreground);
 }
 .home-pins {
   padding: 0 0 0 20%;
@@ -151,10 +152,10 @@ a {
   width: 40px;
   height: 40px;
   background: transparent;
-  border: 2px solid var(--light_blue);
+  border: 2px solid var(--foreground);
   border-radius: 50%;
   font-size: 20px;
-  color: var(--light_blue);
+  color: var(--foreground);
   text-decoration: none;
   z-index: 1;
   overflow: hidden;
@@ -168,7 +169,7 @@ a {
   left: 0;
   width: 0;
   height: 100%;
-  background: var(--light_blue);
+  background: var(--foreground);
   z-index: -1;
   transition: 0.5s;
 }
@@ -177,7 +178,7 @@ a {
   width: 100%;
 }
 .footer a:hover {
-  color: var(--dark_blue);
+  color: var(--background);
 }
 .contact {
   height: 100vh;
@@ -201,4 +202,14 @@ a {
 .social-container i {
   font-size: 46px;
   padding: 0 10%;
+}
+
+@media (max-width: 720px) {
+  .home {
+    flex-direction: column;
+  }
+
+  .home-pins {
+    padding: 0;
+  }
 }
