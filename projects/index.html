@@ -22,7 +22,61 @@
       </nav>
     </header>
     <!-- content goes here -->
+    <div class="main">
+      <div class="main-title" style="text-align: center">
+        <h1>Projects</h1>
+        <div class="main-content">
+          <table>
+            <thead>
+              <tr>
+                <th>Title</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr
+                class="clickable-row"
+                data-href="https://github.com/uysalerinc/nvim-config"
+              >
+                <td>Neovim Configs[WIP]</td>
+                <td>My configurations for best text editor</td>
+              </tr>
+              <tr
+                class="clickable-row"
+                data-href="https://github.com/uysalerinc/awesomewm-config"
+              >
+                <td>AwesomeWM Configs[WIP]</td>
+                <td>Almost default configs for AwesomeWM.</td>
+              </tr>
+              <!-- <tr class="clickable-row" data-href="books">
+                <td>Books I've Read</td>
+                <td>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui
+                  tenetur quos nisi cumque maiores temporibus?
+                </td>
+              </tr> -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
 
-    <!-- content goes here -->
+    <script>
+      const clickableRows = document.querySelectorAll(".clickable-row");
+      let i = 0;
+
+      clickableRows.forEach((row) => {
+        i++;
+        if (i % 2 === 0) {
+          row.classList.toggle("row-seperator");
+        }
+        row.addEventListener("click", () => {
+          const href = row.getAttribute("data-href");
+          if (href) {
+            window.location.href = href;
+          }
+        });
+      });
+    </script>
   </body>
 </html>

@@ -35,23 +35,31 @@
             </thead>
             <tbody>
               <tr class="clickable-row" data-href="books">
-                <td>Books</td>
-                <td>
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi
-                  neque beatae delectus aliquam sunt illo?
-                </td>
+                <td>Books I've Read</td>
+                <td>List of book that I've been read.[WIP].</td>
               </tr>
+              <!-- <tr class="clickable-row" data-href="books">
+                <td>Books I've Read</td>
+                <td>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui
+                  tenetur quos nisi cumque maiores temporibus?
+                </td>
+              </tr> -->
             </tbody>
           </table>
         </div>
       </div>
     </div>
 
-    <!-- content goes here -->
     <script>
       const clickableRows = document.querySelectorAll(".clickable-row");
+      let i = 0;
 
       clickableRows.forEach((row) => {
+        i++;
+        if (i % 2 === 0) {
+          row.classList.toggle("row-seperator");
+        }
         row.addEventListener("click", () => {
           const href = row.getAttribute("data-href");
           if (href) {
@@ -62,3 +70,13 @@
     </script>
   </body>
 </html>
+
+<!-- template -->
+
+<!--         <tr class="clickable-row" data-href="books">
+                <td>Books I've Read</td>
+                <td>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi
+                  neque beatae delectus aliquam sunt illo?
+                </td>
+              </tr> -->
