@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Books I've Been Read</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <!-- <a href="/" class="logo">Erinç</a> -->
+      <nav class="navbar">
+        <a href="/">Home</a>
+        <a href="/about/">About</a>
+        <a href="/projects/">Projets</a>
+        <a href="/blog/" class="active">Blog</a>
+        <a href="/contact/">Contact</a>
+      </nav>
+    </header>
+    <!-- content goes here -->
+    <div class="main">
+      <div class="main-title" style="text-align: center">
+        <h1>Books I've Been Read</h1>
+      </div>
+      <div class="main-content">
+        <table>
+          <thead>
+            <tr>
+              <th class="book-name">Book Name</th>
+              <th>Author</th>
+              <th>Pages</th>
+              <th>Start Date</th>
+              <th>Finish Date</th>
+              <th>Rate</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="clickable-row">
+              <td class="book-name">A Wizard of Earthsea[TR]</td>
+              <td>Ursula K. Le Guin</td>
+              <td>205</td>
+              <td>Unknown</td>
+              <td>Unknown</td>
+              <td>10/10</td>
+            </tr>
+            <tr class="hidden-row">
+              <td colspan="6" class="book-desc">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum
+                consectetur magnam vel asperiores voluptatibus delectus
+                recusandae sint optio fugit quibusdam quaerat voluptas aperiam,
+                repellendus sapiente?
+              </td>
+            </tr>
+            <tr class="date-seperator">
+              <td colspan="6">Before 2023</td>
+            </tr>
+            <tr class="clickable-row">
+              <td class="book-name">A Wizard of Earthsea[TR]</td>
+              <td>Ursula K. Le Guin</td>
+              <td>205</td>
+              <td>Unknown</td>
+              <td>Unknown</td>
+              <td>10/10</td>
+            </tr>
+            <tr class="hidden-row">
+              <td colspan="6" class="book-desc">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum
+                consectetur magnam vel asperiores voluptatibus delectus
+                recusandae sint optio fugit quibusdam quaerat voluptas aperiam,
+                repellendus sapiente?
+              </td>
+            </tr>
+            <tr class="clickable-row">
+              <td>The Tombs of Atuan</td>
+              <td>Ursula K. Le Guin</td>
+              <td>163</td>
+              <td>Unknown</td>
+              <td>Unknown</td>
+              <td>10/10</td>
+            </tr>
+            <tr class="hidden-row">
+              <td colspan="6" class="book-desc">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Molestias itaque eos, minima a numquam eum! Excepturi provident
+                laborum et porro, totam tenetur, illo quaerat voluptates itaque,
+                reprehenderit accusamus officia eius voluptatibus amet
+                distinctio? Alias nam quos, suscipit possimus omnis animi
+                commodi id quod dolor aperiam ipsa a? Id, doloribus aliquam
+                iusto deleniti veniam modi nostrum quaerat ea impedit harum
+                vitae voluptates tempora fugit optio repudiandae laborum! Id
+                numquam accusamus cupiditate dolore alias, ipsa, exercitationem
+                rerum, recusandae officia itaque consectetur harum eaque
+                voluptatum facere? Quisquam vero tempora voluptatum, assumenda,
+                fugiat molestias laboriosam necessitatibus voluptatibus
+                asperiores quos quod dignissimos commodi eos aspernatur?
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <!-- Template -->
+    <!-- <tr class="clickable-row">
+              <td class="book-name">A Wizard of Earthsea[TR]</td>
+              <td>Author</td>
+              <td>Pages</td>
+              <td>Start</td>
+              <td>Finish</td>
+              <td>10/10</td>
+            </tr>
+            <tr class="hidden-row">
+              <td colspan="6" class="book-desc">
+                description
+              </td>
+            </tr> -->
+
+    <script>
+      const clickableRows = document.querySelectorAll(".clickable-row");
+
+      clickableRows.forEach((row) => {
+        row.addEventListener("click", () => {
+          const hiddenRow = row.nextElementSibling;
+          hiddenRow.style.display =
+            hiddenRow.style.display === "table-row" ? "none" : "table-row";
+          row.classList.toggle("clicked-row");
+        });
+      });
+    </script>
+  </body>
+</html>

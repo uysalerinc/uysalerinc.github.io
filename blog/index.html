@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About Me</title>
+    <title>Blog Posts</title>
     <link rel="stylesheet" href="/css/styles.css" />
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
@@ -22,7 +22,43 @@
       </nav>
     </header>
     <!-- content goes here -->
+    <div class="main">
+      <div class="main-title" style="text-align: center">
+        <h1>Posts</h1>
+        <div class="main-content">
+          <table>
+            <thead>
+              <tr>
+                <th>Title</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="clickable-row" data-href="books">
+                <td>Books</td>
+                <td>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi
+                  neque beatae delectus aliquam sunt illo?
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
 
     <!-- content goes here -->
+    <script>
+      const clickableRows = document.querySelectorAll(".clickable-row");
+
+      clickableRows.forEach((row) => {
+        row.addEventListener("click", () => {
+          const href = row.getAttribute("data-href");
+          if (href) {
+            window.location.href = href;
+          }
+        });
+      });
+    </script>
   </body>
 </html>

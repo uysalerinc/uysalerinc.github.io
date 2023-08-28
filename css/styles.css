@@ -5,7 +5,10 @@
   --foreground: #bd93f9;
   --white: #f8f8f2;
   --pink: #ff79c6;
-  /* --somecolor: #50fa7b; */
+  --current-line: #44475a;
+  --command: #6272a4;
+  --gray: #393a45;
+  --green: #50fa7b;
   /* --somecolor: #ffb86c; */
   /* --somecolor: #ff5555; */
   /* --somecolor: #f1fa8c; */
@@ -127,7 +130,7 @@ h1 {
   font-weight: 700;
 }
 .home-pins a {
-  color: var(--white);
+  color: var(--green);
 }
 .home-pins .container {
   font-size: 18px;
@@ -220,6 +223,61 @@ h1 {
 }
 .main-content p {
   padding: 1rem 0;
+}
+
+table {
+  /* border: 1px solid var(--foreground); */
+  border-collapse: collapse;
+  overflow: none;
+  border-radius: 20px;
+  width: 100%;
+  margin-top: 20px;
+}
+th {
+  color: var(--foreground);
+}
+th,
+td {
+  width: auto;
+  border-spacing: 0;
+  padding: 8px;
+  text-align: center;
+}
+book-name {
+  /* padding-left: 6rem; */
+  width: 50%;
+}
+
+.book-desc {
+  width: 100%;
+  text-align: left;
+}
+tr.clickable-row:hover {
+  background-color: var(--command);
+  /* background-color: var(--current-line); */
+  cursor: pointer;
+}
+.clicked-row {
+  background-color: var(--command);
+  /* background: var(--current-line); */
+}
+
+.hidden-row {
+  display: none;
+  background: var(--current-line);
+  /* background: var(--command); */
+  align-items: baseline;
+  text-align: left;
+}
+.date-seperator {
+  background-color: var(--gray);
+  /* color: var(--command); */
+  color: var(--green);
+  text-align: center;
+  font-size: 12px;
+}
+.highlight-links {
+  color: var(--green);
 }
 
 @media (max-width: 720px) {
