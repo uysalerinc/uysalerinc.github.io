@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Blog Posts</title>
+    <title>Projects</title>
     <link rel="stylesheet" href="/css/styles.css" />
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
@@ -16,15 +16,15 @@
       <nav class="navbar">
         <a href="/">Home</a>
         <a href="/about/">About</a>
-        <a href="/projects/">Projets</a>
-        <a href="/blog/" class="active">Blog</a>
+        <a href="/projects/" class="active">Projets</a>
+        <a href="/blog/">Blog</a>
         <a href="/contact/">Contact</a>
       </nav>
     </header>
     <!-- content goes here -->
     <div class="main">
       <div class="main-title" style="text-align: center">
-        <h1>Posts</h1>
+        <h1>Projects</h1>
         <div class="main-content">
           <table>
             <thead>
@@ -34,9 +34,19 @@
               </tr>
             </thead>
             <tbody>
-              <tr class="clickable-row" data-href="books/list.html">
-                <td>Books I've Read</td>
-                <td>List of book that I've been read.[WIP].</td>
+              <tr
+                class="clickable-row"
+                data-href="https://github.com/uysalerinc/nvim-config"
+              >
+                <td>Neovim Configs[WIP]</td>
+                <td>My configurations for best text editor</td>
+              </tr>
+              <tr
+                class="clickable-row"
+                data-href="https://github.com/uysalerinc/awesomewm-config"
+              >
+                <td>AwesomeWM Configs[WIP]</td>
+                <td>Almost default configs for AwesomeWM.</td>
               </tr>
               <!-- <tr class="clickable-row" data-href="books">
                 <td>Books I've Read</td>
@@ -70,13 +80,3 @@
     </script>
   </body>
 </html>
-
-<!-- template -->
-
-<!--         <tr class="clickable-row" data-href="books">
-                <td>Books I've Read</td>
-                <td>
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi
-                  neque beatae delectus aliquam sunt illo?
-                </td>
-              </tr> -->
