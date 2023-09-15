@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -17,7 +17,7 @@
       <nav class="navbar">
         <a href="/">Home</a>
         <a href="/about/">About</a>
-        <a href="/projects/">Projets</a>
+        <a href="/projects/">Projects</a>
         <a href="/blog/" class="active">Blog</a>
         <a href="/contact/">Contact</a>
       </nav>
@@ -41,12 +41,12 @@
           </thead>
           <tbody>
             <tr class="clickable-row">
-            <td>Atuan'ın Mezarları</td>
-            <td>Ursula K. Le Guin</td>
-            <td>163</td>
-            <td>Unknown</td>
-            <td>Unknown</td>
-            <td>10/10</td>
+              <td>Atuan'ın Mezarları</td>
+              <td>Ursula K. Le Guin</td>
+              <td>163</td>
+              <td>Unknown</td>
+              <td>Unknown</td>
+              <td>10/10</td>
             </tr>
             <tr class="hidden-row">
               <td colspan="6" class="book-desc">
@@ -145,7 +145,7 @@
               <td colspan="6" class="book-desc">description</td>
             </tr>
             <tr class="clickable-row">
-              <td class="book-name">Tüm Panayırların Heyulası[TR]</td>
+              <td class="book-name">Tüm Panayırların Heyulası</td>
               <td>Collective</td>
               <td>288</td>
               <td>Unknown</td>
@@ -236,15 +236,15 @@
             </tr> -->
 
     <script>
-      const clickableRows = document.querySelectorAll('.clickable-row')
+      const clickableRows = document.querySelectorAll(".clickable-row");
       clickableRows.forEach((row) => {
-        row.addEventListener('click', () => {
-          const hiddenRow = row.nextElementSibling
+        row.addEventListener("click", () => {
+          const hiddenRow = row.nextElementSibling;
           hiddenRow.style.display =
-            hiddenRow.style.display === 'table-row' ? 'none' : 'table-row'
-          row.classList.toggle('clicked-row')
-        })
-      })
+            hiddenRow.style.display === "table-row" ? "none" : "table-row";
+          row.classList.toggle("clicked-row");
+        });
+      });
     </script>
   </body>
 </html>
